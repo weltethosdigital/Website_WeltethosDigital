@@ -10,6 +10,14 @@
 body {font-family: "Raleway", Arial, sans-serif}
 .w3-row img {margin-bottom: -8px}
 </style>
+<style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
 <script>
 function allowDrop(ev) {
   ev.preventDefault();
@@ -28,18 +36,32 @@ function drop(ev) {
 </head>
 <body>
 
-<p>Drag the W3Schools image into the rectangle:</p>
 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<br>
-<img id="drag1" src="logo.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
-<br>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<br>
-<img id="drag1" src="logo.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<br>
-<img id="drag1" src="logo.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
-</body>
-</html>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+  <!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+    <a href="#" class="w3-left w3-button w3-white">WELTETHOS DIGITAL</a>
+  </header>
+
+  <!-- Photo Grid -->
+  <div class="w3-row">
+    <p>Drag the W3Schools image into the rectangle:</p>
+    <div class="w3-half">
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <img id="drag1" src="logo.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+    </div>
+
+    <div class="w3-half">
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <img id="drag1" src="logo.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+
 
