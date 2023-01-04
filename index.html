@@ -12,10 +12,10 @@ body {font-family: "Raleway", Arial, sans-serif}
 </style>
 <style>
 #div1 {
-  width: 350px;
-  height: 70px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
+  width: 500px;
+  height: 200px;
+  padding: 100px;
+  border: 10px solid #aaaaaa;
 }
 </style>
 <script>
@@ -25,13 +25,32 @@ function allowDrop(ev) {
 
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
+  document.getElementById("demo").innerHTML = "Started to drag the text";
 }
 
 function drop(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
+  event.target.appendChild(document.getElementById(data));
+  document.getElementById("demo").innerHTML = "The text was dropped";
 }
+
+// function dragStart(event) {
+//   event.dataTransfer.setData("Text", event.target.id);
+//   document.getElementById("demo").innerHTML = "Started to drag the text";
+// }
+
+// function allowDrop(event) {
+//   event.preventDefault();
+// }
+
+// function drop(event) {
+//   event.preventDefault();
+//   const data = event.dataTransfer.getData("Text");
+//   event.target.appendChild(document.getElementById(data));
+//   document.getElementById("demo").innerHTML = "The text was dropped";
+// }
 </script>
 </head>
 <body>
@@ -85,7 +104,6 @@ function drop(ev) {
   <div class="w3-third">
     <img src="w3images/rocks.jpg" style="width:100%">
     <img src="w3images/skies.jpg" style="width:100%">
-    <img src="w3images/gondol.jpg" style="width:100%">
     <img src="w3images/lights.jpg" style="width:100%">
   </div>
 </div>
